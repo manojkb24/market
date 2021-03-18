@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+  
+
+</head>
+<style>
+
+#commanheader {
+    background-color: rgba(0, 123, 255, 0.13)!important;
+    /* height: 100px; */
+    background-image: url(../images/supermarkets.jpg);
+  background-color: purple;
+  background-position: center;
+  max-width:100%;
+max-height:100%;
+
+}
+.bg-success {
+    background-color: #3b536b!important;
+}
+#menu ul {
+    float: right;
+    margin: 0px;
+    padding: 60px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+}
+
+#hii {
+    background-color: #3b536b!important;
+    width:340px;
+    height: 550px
+
+}
+
+
+
+body {
+  width: 1800px;
+  height: 50px;
+  
+}
+
+/* body {
+    background-image: url(../images/supermarkets.jpg);
+} */
+#bye{
+
+    margin-top: -700px;
+    margin-left: 500px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.05);
+    border-image: initial;
+}
+
+.tab-content{
+
+  margin-top: -500px;
+    margin-left: 400px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #95a2b1;
+    border-image: initial;
+    padding: 10px;
+    width: 1100px;
+}
+
+#market{
+  font-style: oblique;
+}
+
+
+/* #tableb{
+
+  border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.05);
+    border-image: initial;
+} */
+
+.carousel-inner img {
+  width: 2000px;
+    height: 300px;
+  }
+
+  </style>
+<body>
+
+
+<div class="container-fluid" >
+    <div id ="commanheader">
+        <div class ="row">
+            <div class ="col">
+                <!-- <p id ="market" class="display-3 text-info">SuperMarket Managment</p> -->
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                  <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                  </ul>
+                  
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../images/AdobeStock_143889030_Preview.jpeg" alt="Los Angeles" >
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../images/AdobeStock_337838976_Preview.jpeg" alt="Chicago" >
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../images/AdobeStock_294791573_Preview.jpeg" alt="New York" >
+                    </div>
+                  </div>
+                  
+                  <!-- Left and right controls -->
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+            </div>
+            <!-- <div class = "col" id ="menu">
+                <div style=>
+                <ul class="nav" style="margin-top: -41px;">
+                    <li class="nav-item"><a class="nav-link" href="loginMarket.html" accesskey="2" title="">Log out</a></li>
+                                    </ul>
+            </div>
+            </div>    -->
+        </div> 
+       
+    </div> 
+    
+    <div class="container-fluid ">
+        <div class ="row"id="hii"style=" padding: 50px;">
+        <div class ="col-1">
+
+            <div style=" padding: 50px;">
+              <ul class="nav flex-column" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="pill" href="#home">Add Item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu1">Update Item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu2">Delete Item</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu3" accesskey="5">Generate Bill</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu4">View Item</a>
+                </li>
+              </ul>
+            </div>
+
+
+
+            
+
+            </div>
+    </div>
+    <div class="tab-content">
+
+    <div  class="container tab-pane active" id ="home">
+    <div class ="col">
+
+      <form  id="additem">
+        <div class="form-group">
+          <label for="Price">Item Name</label>
+          <input type="text" class="form-control" id="itemName" placeholder="Enter Item Name" name="itemName">
+        </div>
+        <div class="form-group">
+          <label for="Price">Price:</label>
+          <input type="number" class="form-control" id="price" placeholder="Enter Price/piece" name="price">
+        </div>
+        
+        <div class="form-group">
+            <label for="Quantity">Quantity</label>
+              <input class="form-control" type="number" id ="quantity"> 
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="ExpireDate">ExpiryDate</label>
+              <input class="form-control" type="date" id ="expiryDate"> 
+            </label>
+          </div>
+        <button type ="submit"  id ="cli"class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+    </div>
+    <div class="container tab-pane fade" id ="menu1">
+      <div class ="col">
+  
+        <form id ="update">
+          <div class="form-group">
+            <label for="Price">Enter item Name to update</label>
+            <input type="text" class="form-control" id="itemName1" placeholder="Enter Item Name to update" name="itemname">
+          </div>
+          <div class="form-group">
+            <label for="Price">Price:</label>
+            <input type="number" class="form-control" id="price1" placeholder="Enter Price/piece" name="Price">
+          </div>
+          
+          <div class="form-group">
+              <label for="Quantity">Quantity</label>
+                <input class="form-control" type="number" id ="quantity1"> 
+              </label>
+            </div>
+          
+          <button type ="submit"  id ="cli"class="btn btn-primary">Submit</button>
+        </form>
+  
+      </div>
+      </div>
+
+   
+  
+        <div id="menu4" class="container tab-pane fade"><br>
+          <!-- <div id ="data"> -->
+          <h3 id="fedexcustomername">List of All Items for</h3>
+          <!-- <div id ="data"> -->
+          <table class="table-fill table-bordered" id="viewItems" style="color:black;background-color:white;">
+
+              </table>
+          </div>
+          <!-- </div> -->
+      <!-- </div> -->
+
+      <div class="container tab-pane fade" id ="menu2">
+        <div class ="col">
+    
+          <form  action="">
+            <div class="form-group">
+              <label for="Price">Enter the Item Name</label>
+              <input type="text" class="form-control" id="delete" placeholder="Enter Item Name to delete" name="itemname">
+            </div>
+       
+            <button type ="submit"  id ="cli"class="btn btn-primary">Submit</button>
+          </form>
+    
+        </div>
+        </div>
+      
+    <div class="container tab-pane fade" id ="menu3">
+      <div class ="col">
+        <table class="table table-bordered">
+          <thead>
+              <tr class="item-row">
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+              </tr>
+          </thead>
+          <tbody>
+          <tr id="hiderow">
+              <td colspan="4">
+                  <a id="addRow" href="javascript:;" title="Add a row" class="btn btn-primary">Add a row</a>
+              </td>
+          </tr>
+          <!-- Here should be the item row -->
+          <!--<tr class="item-row">
+              <td><input class="form-control item" placeholder="Item" type="text"></td>
+              <td><input class="form-control price" placeholder="Price" type="text"></td>
+              <td><input class="form-control qty" placeholder="Quantity" type="text"></td>
+              <td><span class="total">0.00</span></td>
+          </tr>-->
+          <tr>
+              <td></td>
+              <td></td>
+              <td class="text-right"><strong>Sub Total</strong></td>
+              <td><span id="subtotal">0.00</span></td>
+          </tr>
+          <tr>
+              <td><strong>Total Quantity: </strong><span id="totalQty" style="color: red; font-weight: bold">0</span> Units</td>
+              <td></td>
+              <td class="text-right"><strong>Discount</strong></td>
+              <td><input class="form-control" id="discount" value="0" type="text"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td class="text-right"><strong>Shipping</strong></td>
+              <td><input class="form-control" id="shipping" value="0" type="text"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td class="text-right"><strong>Grand Total</strong></td>
+              <td><span id="grandTotal">0</span></td>
+          </tr>
+          </tbody>
+      </table>
+
+        </div>
+    </div>
+    </div>
+      </div>
+
+    </div>
+    <!-- </div> -->
+     
+
+<script>
+    $("form").submit(function(e){
+         e.preventDefault()
+
+            var phone = $("#phonenumber").val();
+            var email = $("#email").val();
+            var markup = "<tr><td>" + email + "</td><td>" + phone + "</td></tr>";
+            $("table tbody").append(markup);
+            $('#myModal').modal('hide');
+    return false;
+    });
+    </script>
+      <script>
+        jQuery(document).ready(function(){
+            jQuery().invoice({
+                addRow : "#addRow",
+                delete : ".delete",
+                parentClass : ".item-row",
+
+                price : ".price",
+                qty : ".qty",
+                total : ".total",
+                totalQty: "#totalQty",
+
+                subtotal : "#subtotal",
+                discount: "#discount",
+                shipping : "#shipping",
+                grandTotal : "#grandTotal"
+            });
+        });
+    </script>
+  
+  <script src="jquery.invoice.js"></script>
+
+  <script src="additem.js"></script>
+  <script src="getItem.js"></script>
+  <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+  <script src="update.js"></script>
+
+
+
+
+</body>
+
+</html>
