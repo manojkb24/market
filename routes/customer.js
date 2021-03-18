@@ -28,7 +28,7 @@ customerRouter.route('/')
     res.setHeader('Content-Type', 'application/json');
 
     //get body
-    console.log("hii manoj")
+    // console.log("hii manoj")
     let firstName = req.body;
     console.log(firstName)
     
